@@ -46,7 +46,7 @@ public class Review extends BaseEntity {
 	@Lob
 	private String content;
 
-	private Integer rating;
+	private Double rating;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "store_id")

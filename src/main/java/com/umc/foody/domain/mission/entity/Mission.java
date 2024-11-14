@@ -12,8 +12,6 @@ import com.umc.foody.global.common.BaseEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -42,12 +40,8 @@ public class Mission extends BaseEntity {
 	private Long id;
 
 	private Integer condition; // 미션 조건
-	private Double percentage; // 미션 달성률
 
-	private Integer reward; // 미션 보상
-
-	@Enumerated(EnumType.STRING)
-	private MissionType missionType; // 미션 타입
+	private Double reward; // 미션 보상
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "store_id")
