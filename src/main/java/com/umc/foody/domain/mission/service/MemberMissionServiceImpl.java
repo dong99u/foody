@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.umc.foody.domain.member_mission.entity.MemberMission;
 import com.umc.foody.domain.mission.dto.MemberMissionResponseDto;
-import com.umc.foody.domain.mission.entity.MemberMission;
 import com.umc.foody.domain.mission.mapper.MemberMissionMapper;
 import com.umc.foody.domain.mission.repository.MemberMissionRepository;
 

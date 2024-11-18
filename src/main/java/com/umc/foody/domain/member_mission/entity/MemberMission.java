@@ -1,9 +1,10 @@
-package com.umc.foody.domain.mission.entity;
+package com.umc.foody.domain.member_mission.entity;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import com.umc.foody.auth.member.entity.Customer;
+import com.umc.foody.domain.mission.entity.Mission;
 import com.umc.foody.global.common.BaseEntity;
 
 import jakarta.persistence.Column;

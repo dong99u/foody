@@ -1,6 +1,6 @@
 package com.umc.foody.domain.mission.dto;
 
-import com.umc.foody.domain.mission.entity.MissionStatus;
+import com.umc.foody.domain.member_mission.entity.MissionStatus;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

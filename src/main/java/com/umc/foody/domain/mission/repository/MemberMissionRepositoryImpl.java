@@ -9,8 +9,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.umc.foody.domain.mission.entity.MemberMission;
-import com.umc.foody.domain.mission.entity.MissionStatus;
+import com.umc.foody.domain.member_mission.entity.MemberMission;
+import com.umc.foody.domain.member_mission.entity.MissionStatus;
 
 import lombok.RequiredArgsConstructor;
 

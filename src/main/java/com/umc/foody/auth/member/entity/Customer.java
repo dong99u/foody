@@ -9,7 +9,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import com.umc.foody.domain.alarm.entity.Alarm;
 import com.umc.foody.domain.foodcategory.entity.FavoriteFoodCategory;
-import com.umc.foody.domain.mission.entity.MemberMission;
+import com.umc.foody.domain.member_mission.entity.MemberMission;
 import com.umc.foody.domain.review.entity.Review;
 
 import jakarta.persistence.CascadeType;

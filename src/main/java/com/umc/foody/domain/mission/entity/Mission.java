@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.umc.foody.domain.member_mission.entity.MemberMission;
 import com.umc.foody.domain.store.entity.Store;
 import com.umc.foody.global.common.BaseEntity;
 

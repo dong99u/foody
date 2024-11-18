@@ -8,7 +8,7 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
-
+import com.umc.foody.domain.member_mission.entity.MemberMission;
 
 /**
  * QCustomer is a Querydsl query type for Customer
@@ -48,7 +48,7 @@ public class QCustomer extends EntityPathBase<Customer> {
     //inherited
     public final BooleanPath isDeleted;
 
-    public final ListPath<com.umc.foody.domain.mission.entity.MemberMission, com.umc.foody.domain.mission.entity.QMemberMission> memberMissions = this.<com.umc.foody.domain.mission.entity.MemberMission, com.umc.foody.domain.mission.entity.QMemberMission>createList("memberMissions", com.umc.foody.domain.mission.entity.MemberMission.class, com.umc.foody.domain.mission.entity.QMemberMission.class, PathInits.DIRECT2);
+    public final ListPath<MemberMission, com.umc.foody.domain.mission.entity.QMemberMission> memberMissions = this.<MemberMission, com.umc.foody.domain.mission.entity.QMemberMission>createList("memberMissions", MemberMission.class, com.umc.foody.domain.mission.entity.QMemberMission.class, PathInits.DIRECT2);
 
     //inherited
     public final StringPath name;

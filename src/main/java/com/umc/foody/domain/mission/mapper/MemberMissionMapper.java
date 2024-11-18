@@ -1,7 +1,7 @@
 package com.umc.foody.domain.mission.mapper;
 
+import com.umc.foody.domain.member_mission.entity.MemberMission;
 import com.umc.foody.domain.mission.dto.MemberMissionResponseDto;
-import com.umc.foody.domain.mission.entity.MemberMission;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
