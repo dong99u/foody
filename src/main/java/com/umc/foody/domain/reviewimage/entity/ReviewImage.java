@@ -40,4 +40,11 @@ public class ReviewImage extends BaseEntity {
 	@JoinColumn(name = "review_id")
 	private Review review;
 
+	//==생성메서드==//
+	public static ReviewImage createReviewImage(String imageUrl) {
+		return ReviewImage.builder()
+			.imageUrl(imageUrl)
+			.build();
+	}
+
 }

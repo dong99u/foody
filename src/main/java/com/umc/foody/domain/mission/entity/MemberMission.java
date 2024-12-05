@@ -44,4 +44,30 @@ public class MemberMission extends BaseEntity {
 
 	private MissionStatus status; // 미션 상태
 
+	//==생성 메서드==//
+	public static MemberMission createMemberMission(Customer customer, Mission mission) {
+		MemberMission newMemberMission = MemberMission.builder()
+			.customer(customer)
+			.mission(mission)
+			.status(MissionStatus.PROGRESS)
+			.build();
+
+		// Member와 MemberMission 연관관계 매핑
+		newMemberMission.setCustomer(customer);
+
+		newMemberMission.setMission(mission);
+
+		return newMemberMission;
+
+	}
+
+	private void setCustomer(Customer customer) {
+		this.customer = customer;
+		customer.getMemberMissions().add(this);
+	}
+
+	private void setMission(Mission mission) {
+		this.mission = mission;
+		mission.getMemberMissions().add(this);
+	}
 }

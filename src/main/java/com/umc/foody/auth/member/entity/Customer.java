@@ -1,9 +1,11 @@
 package com.umc.foody.auth.member.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -43,7 +45,9 @@ public class Customer extends Member {
 	private Long id;
 
 	@Column(nullable = false)
-	private Integer points; // 포인트
+	@Builder.Default
+	@ColumnDefault("0")
+	private Integer points = 0; // 포인트
 
 	@OneToMany(mappedBy = "customer", orphanRemoval = true, cascade = CascadeType.ALL)
 	@Builder.Default
@@ -66,12 +70,37 @@ public class Customer extends Member {
 	 * 편의 메서드
 	 * */
 
-	@Override
+	/**
+	 * 회원 생성
+	 * @param name
+	 * @param gender
+	 * @param birthDate
+	 * @param address
+	 * @param favoriteFoodCategories
+	 * @return
+	 */
+	public static Customer createCustomer(String name, Gender gender, LocalDate birthDate, Address address) {
+		return Customer.builder()
+			.name(name)
+			.gender(gender)
+			.birthDate(birthDate)
+			.address(address)
+			.build();
+	}
 
+	public void addFavoriteFoodCategory(FavoriteFoodCategory favoriteFoodCategory) {
+		this.favoriteFoodCategories.add(favoriteFoodCategory);
+	}
+
+	@Override
 	public void deactivate() {
 		this.points = 0;  // 포인트 소멸
 		setInactivatedAt(LocalDateTime.now());
 		setIsDeleted(true);
+	}
+
+	public void addReview(Review review) {
+		this.reviews.add(review);
 	}
 
 }

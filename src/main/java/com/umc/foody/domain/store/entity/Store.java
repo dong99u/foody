@@ -70,4 +70,12 @@ public class Store extends BaseEntity {
 	@Builder.Default
 	private List<Mission> missions = new ArrayList<>();
 
+	/*
+	 * 사용자 편의 메서드
+	 * */
+
+	public void addReview(Review review) {
+		this.reviews.add(review);
+	}
+
 }
