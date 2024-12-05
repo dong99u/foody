@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -23,6 +24,8 @@ public class QFoodCategory extends EntityPathBase<FoodCategory> {
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
+
+    public final ListPath<FavoriteFoodCategory, QFavoriteFoodCategory> favoriteFoodCategories = this.<FavoriteFoodCategory, QFavoriteFoodCategory>createList("favoriteFoodCategories", FavoriteFoodCategory.class, QFavoriteFoodCategory.class, PathInits.DIRECT2);
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 

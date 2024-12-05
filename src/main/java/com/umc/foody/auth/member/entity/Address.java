@@ -33,4 +33,14 @@ public class Address {
 	// 우편번호
 	@Column(nullable = false, length = 10)
 	private String zipcode;
+
+	public static Address createAddress(String province, String city, String street, String detail, String zipcode) {
+		return Address.builder()
+			.province(province)
+			.city(city)
+			.street(street)
+			.detail(detail)
+			.zipcode(zipcode)
+			.build();
+	}
 }

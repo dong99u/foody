@@ -41,5 +41,15 @@ public class FavoriteFoodCategory extends BaseEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
-	
+
+	public static FavoriteFoodCategory createFavoriteFoodCategory(FoodCategory foodCategory, Customer customer) {
+		FavoriteFoodCategory favoriteFoodCategory = FavoriteFoodCategory.builder()
+			.foodCategory(foodCategory)
+			.customer(customer)
+			.build();
+
+		customer.addFavoriteFoodCategory(favoriteFoodCategory);
+		return favoriteFoodCategory;
+	}
+
 }
